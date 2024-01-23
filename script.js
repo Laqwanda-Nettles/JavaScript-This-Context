@@ -23,3 +23,15 @@ btn1.addEventListener(
   "click",
   messageHandler.displayMessage1.bind(messageHandler)
 );
+
+let btn2 = document.getElementById("btn2");
+btn2.addEventListener(
+  "click",
+  messageHandler.displayMessage2.bind(messageHandler)
+);
+
+let btn3 = document.getElementById("btn3");
+btn3.addEventListener(
+  "click",
+  messageHandler.displayMessage3.bind(messageHandler)
+);
