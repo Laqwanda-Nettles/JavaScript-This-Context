@@ -49,3 +49,4 @@ const person = {
     console.log("Hello, " + this.name); // this will display - Hello, undefined.
   },
 };
+// compared to how arrow functions and regular functions are handled and stored the results of using "this" will differ. In an arrow function this has nothing to refer to so it comes back undefined.
