@@ -38,3 +38,14 @@ btn3.addEventListener(
   messageHandler.displayMessage3.bind(messageHandler)
 );
 // to bind is like keeping a copy of a method that can be called later.
+
+const person = {
+  name: "Frank",
+  age: 42,
+  greet: function () {
+    console.log("Hello, " + this.name); // this will display - Hello, Frank
+  },
+  welcome: () => {
+    console.log("Hello, " + this.name); // this will display - Hello, undefined.
+  },
+};
