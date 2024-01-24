@@ -5,6 +5,7 @@ const messageHandler = {
   displayMessage1: function () {
     this.displayMessage(this.message1);
   },
+  // this.displayMessage is refrencing the displayMessage method below. this.message1 refers to the property above. So, the displayMessage1 method is saying it's refrencing this to create a p element and placing the message above inside of that element.
   displayMessage2: function () {
     this.displayMessage(this.message2);
   },
@@ -16,22 +17,24 @@ const messageHandler = {
     p.textContent = message;
     document.body.appendChild(p);
   },
+  // this method is creating a p element and is used to append the messages from the messHandler object to the body.
 };
 
-let btn1 = document.getElementById("btn1");
+const btn1 = document.getElementById("btn1");
 btn1.addEventListener(
   "click",
   messageHandler.displayMessage1.bind(messageHandler)
 );
-
-let btn2 = document.getElementById("btn2");
+// assigning the btn1 variable to button 1 & attaching the variable to an eventlistener. binding the click event to the messageHandler's display message.
+const btn2 = document.getElementById("btn2");
 btn2.addEventListener(
   "click",
   messageHandler.displayMessage2.bind(messageHandler)
 );
 
-let btn3 = document.getElementById("btn3");
+const btn3 = document.getElementById("btn3");
 btn3.addEventListener(
   "click",
   messageHandler.displayMessage3.bind(messageHandler)
 );
+// to bind is like keeping a copy of a method that can be called later.
